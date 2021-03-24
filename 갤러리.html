@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="webstoryboy">
+    <meta name="description" content="웹 표준을 준수한 사이트 예제입니다.">
+    <meta name="keywords" content="웹표준, 웹접근성, 샘플사이트">
+    <meta name="generator" content="brackets">
+    <title>WEBSTANDARD SITE</title>
+    <!-- 갤러리 -->
+    
+    <!-- style -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/갤러리.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+</head>
+<body>
+    <div id="wrap">
+        <div id="contents">
+
+            <div id="cont_cont">
+                <div class="container">
+                    <div class="cont">
+                        <div class="column col1">
+                            <h3><span class="ico_img ir_pm">아이콘1</span><em class="ico_tit">Notice</em></h3>
+                            <p class="ico_desc">가장 웹 페이지에서 기본이 되는 게시판 유형입니다.</p>
+                        </div>
+                        <!-- //col1 -->
+                        <div class="column col2">
+                            <h3><span class="ico_img ir_pm">아이콘2</span><em class="ico_tit">Notice</em></h3>
+                            <p class="ico_desc">가장 웹 페이지에서 기본이 되는 게시판 유형입니다.</p>
+                        </div>
+                        <!-- //col2 -->
+                        <div class="column col3">
+                            <h3><span class="ico_img ir_pm">아이콘3</span><em class="ico_tit">Notice</em></h3>
+                            <p class="ico_desc">가장 웹 페이지에서 기본이 되는 게시판 유형입니다.</p>
+                        </div>
+                        <!-- //col3 -->
+                        <div class="column col4">
+                            <h3><span class="ico_img ir_pm">아이콘4</span><em class="ico_tit">Notice</em></h3>
+                            <p class="ico_desc">가장 웹 페이지에서 기본이 되는 게시판 유형입니다.</p>
+                        </div>
+                        <!-- //col4 -->
+                        <div class="column col5">
+                            <h3><span class="ico_img ir_pm">아이콘5</span><em class="ico_tit">Notice</em></h3>
+                            <p class="ico_desc">가장 웹 페이지에서 기본이 되는 게시판 유형입니다.</p>
+                        </div>
+                        <!-- //col5 -->
+                        <div class="column col6">
+                            <h3><span class="ico_img ir_pm">아이콘6</span><em class="ico_tit">Notice</em></h3>
+                            <p class="ico_desc">가장 웹 페이지에서 기본이 되는 게시판 유형입니다.</p>
+
+                            <!-- 갤러리 -->
+                            <div class="gallery">
+                                <h4>포트폴리오</h4>
+                            <!-- <div class="gallery_btn">
+                                    <ul>
+                                        <li class="gb_icon1"><a href="#"><span class="ir_pm">시작</span></a></li>
+                                        <li class="gb_icon2"><a href="#"><span class="ir_pm">정지</span></a></li>
+                                        <li class="gb_icon3"><a href="#"><span class="ir_pm">이전이미지</span></a></li>
+                                        <li class="gb_icon4"><a href="#"><span class="ir_pm">다음이미지</span></a></li>
+                                    </ul>
+                                </div> -->
+                                <div class="gallery_btn">
+                                    <button class="gb_icon1 play"><span class="ir_pm">Play</span></button>
+                                    <button class="gb_icon2 pause"><span class="ir_pm">Pause</span></button>
+                                    <button class="gb_icon3 prev"><span class="ir_pm">prev</span></button>
+                                    <button class="gb_icon4 next"><span class="ir_pm">next</span></button>
+                                </div>
+                                
+                                <div class="gallery_img">
+                                <!-- <ul>
+                                        <li><a href="#"><img src="img/gallery01.jpg" alt="갤러리1"></a></li>
+                                        <li><a href="#"><img src="img/gallery02.jpg" alt="갤러리2"></a></li>
+                                        <li><a href="#"><img src="img/gallery03.jpg" alt="갤러리3"></a></li>
+                                        <li><a href="#"><img src="img/gallery04.jpg" alt="갤러리4"></a></li>
+                                        <li><a href="#"><img src="img/gallery05.jpg" alt="갤러리5"></a></li>
+                                    </ul> -->
+                                    <div><a href="#"><img src="img/gallery01.jpg" alt="갤러리1"></a></div>
+                                    <div><a href="#"><img src="img/gallery02.jpg" alt="갤러리2"></a></div>
+                                    <div><a href="#"><img src="img/gallery03.jpg" alt="갤러리3"></a></div>
+                                    <div><a href="#"><img src="img/gallery04.jpg" alt="갤러리4"></a></div>
+                                    <div><a href="#"><img src="img/gallery05.jpg" alt="갤러리5"></a></div>
+                                </div>
+                            </div>
+                            <!-- //갤러리 -->
+
+                        </div>
+                        <!-- //col6 -->
+                    </div>
+                </div>
+            </div>
+            <!-- //cont_cont -->
+
+            </div>
+        <!-- //contents -->
+        
+    </div>
+    <!-- //wrap -->
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="js/slick.min.js"></script>
+
+    <script>
+        //갤러리
+        $('.gallery_img').slick({
+            dots: true,
+            fade: true,
+            pauseOnHover: true,
+            arrows: false,
+            infinite: true,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            speed: 300,
+            slidesToShow: 1
+        });
+        
+        $('.pause').on('click', function(){
+            $('.gallery_img').slick('slickPause');
+        });
+
+        $('.play').on('click', function(){
+            $('.gallery_img').slick('slickPlay');
+        });
+        
+        $('.prev').on('click', function(){
+            $('.gallery_img').slick('slickPrev');
+        });
+        
+        $('.next').on('click', function(){
+            $('.gallery_img').slick('slickNext');
+        });
+
+    </script>
+
+</body>
+</html>
